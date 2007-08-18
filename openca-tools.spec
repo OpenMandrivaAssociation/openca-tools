@@ -52,7 +52,7 @@ done
 %build
 %serverbuild
 rm -f configure
-libtoolize --copy --force; aclocal-1.9 -I build; autoconf; automake-1.9 --add-missing --copy
+libtoolize --copy --force; aclocal -I build; autoconf; automake --add-missing --copy
 
 %configure2_5x \
     --enable-engine \
