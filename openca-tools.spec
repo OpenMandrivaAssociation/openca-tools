@@ -11,7 +11,6 @@ Requires:	openssl >= 0.9.7
 BuildRequires:	openssl >= 0.9.7
 BuildRequires:	openssl-devel >= 0.9.7
 BuildRequires:	automake1.9
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 OpenCA Tools provide command line facilities for (1) digital signatures
