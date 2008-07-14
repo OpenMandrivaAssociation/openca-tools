@@ -7,11 +7,12 @@ Group:		System/Servers
 URL:		http://www.openca.org/
 Source0:	openca-tools-%{version}.tar.gz
 Patch0:		openca-tools-no_rpath.diff
+Patch1:		openca-tools-autoconf_fixes.diff
 Requires:	openssl >= 0.9.7
 BuildRequires:	openssl >= 0.9.7
 BuildRequires:	openssl-devel >= 0.9.7
 BuildRequires:	automake1.9
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 OpenCA Tools provide command line facilities for (1) digital signatures
@@ -43,6 +44,7 @@ This product includes OpenCA software written by Massimiliano Pala
 
 %setup -q
 %patch0 -p0
+%patch1 -p0
 
 # clean up CVS stuff
 for i in `find . -type d -name CVS` `find . -type f -name .cvs\*` `find . -type f -name .#\*`; do
