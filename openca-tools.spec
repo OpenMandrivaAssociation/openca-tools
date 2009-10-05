@@ -8,6 +8,7 @@ URL:		http://www.openca.org/
 Source0:	openca-tools-%{version}.tar.gz
 Patch0:		openca-tools-no_rpath.diff
 Patch1:		openca-tools-autoconf_fixes.diff
+Patch2:		openca-tools-1.1.0-format_not_a_string_literal_and_no_format_arguments.diff
 Requires:	openssl >= 0.9.7
 BuildRequires:	openssl >= 0.9.7
 BuildRequires:	openssl-devel >= 0.9.7
@@ -51,6 +52,7 @@ OpenCA CRMF Tool
 %setup -q
 %patch0 -p0
 %patch1 -p0
+%patch2 -p1
 
 # clean up CVS stuff
 for i in `find . -type d -name CVS` `find . -type f -name .cvs\*` `find . -type f -name .#\*`; do
