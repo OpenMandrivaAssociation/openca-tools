@@ -1,13 +1,12 @@
 Summary:	OpenCA Base Tools
 Name:		openca-tools
-Version:	1.1.0
-Release:	%mkrel 3
+Version:	1.3.0
+Release:	%mkrel 1
 License:	BSD-style
 Group:		System/Servers
 URL:		http://www.openca.org/
-Source0:	openca-tools-%{version}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/openca/%name-%version.tar.gz
 Patch0:		openca-tools-no_rpath.diff
-Patch1:		openca-tools-autoconf_fixes.diff
 Patch2:		openca-tools-1.1.0-format_not_a_string_literal_and_no_format_arguments.diff
 Requires:	openssl >= 0.9.7
 BuildRequires:	openssl >= 0.9.7
@@ -51,13 +50,7 @@ OpenCA CRMF Tool
 
 %setup -q
 %patch0 -p0
-%patch1 -p0
 %patch2 -p1
-
-# clean up CVS stuff
-for i in `find . -type d -name CVS` `find . -type f -name .cvs\*` `find . -type f -name .#\*`; do
-    if [ -e "$i" ]; then rm -r $i; fi >&/dev/null
-done
 
 # fix borkiness
 perl -pi -e "s|/etc/issue|/etc/mandriva-release|g" configure*
@@ -65,7 +58,7 @@ perl -pi -e "s|/etc/issue|/etc/mandriva-release|g" configure*
 %build
 %serverbuild
 rm -f configure
-autoreconf -fis
+autoreconf -fi
 
 %configure2_5x \
     --enable-engine \
