@@ -1,0 +1,11 @@
+--- configure.in	2006-10-09 20:31:32.000000000 +0200
++++ configure.in.oden	2007-08-18 11:56:41.000000000 +0200
+@@ -140,7 +140,7 @@
+ 	dnl Now see if the user specified openssl_prefix
+ 	if [[ x${openssl_prefix} != x ]]; then
+ 	   openssl_cflags=[-I${openssl_prefix}/include]
+-	   openssl_libs=["-Wl,-rpath,${openssl_prefix}/lib -L${openssl_prefix}/lib -L${openssl_prefix} -lcrypto -lssl"]
++	   openssl_libs=["-lcrypto -lssl"]
+ 	   openssl_setup=yes
+ 	   AC_MSG_RESULT( [User specified --with-openssl-prefix])
+ 	   dnl Check if the developer has the pkg-config macros

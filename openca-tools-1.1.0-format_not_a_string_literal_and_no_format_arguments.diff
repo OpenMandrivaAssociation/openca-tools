@@ -1,0 +1,54 @@
+diff -Naurp openca-tools-1.1.0/src/crmf/crmf.c openca-tools-1.1.0.oden/src/crmf/crmf.c
+--- openca-tools-1.1.0/src/crmf/crmf.c	2008-04-03 00:59:36.000000000 +0200
++++ openca-tools-1.1.0.oden/src/crmf/crmf.c	2009-10-05 15:41:02.000000000 +0200
+@@ -146,7 +146,7 @@ bad:
+ badops:
+         if (badops) {
+                 for (pp=usage; (*pp != NULL); pp++)
+-                        BIO_printf(bio_err,*pp);
++                        BIO_printf(bio_err, "%s", *pp);
+                         exit(1);
+         }
+ 
+diff -Naurp openca-tools-1.1.0/src/scep/scep.c openca-tools-1.1.0.oden/src/scep/scep.c
+--- openca-tools-1.1.0/src/scep/scep.c	2007-04-11 03:46:08.000000000 +0200
++++ openca-tools-1.1.0.oden/src/scep/scep.c	2009-10-05 15:41:02.000000000 +0200
+@@ -509,7 +509,7 @@ int	main(int argc, char *argv[]) {
+ bad:
+ 	if (badops) {
+ 		for (pp=usage; (*pp != NULL); pp++)
+-                        BIO_printf(bio_err,*pp);
++                        BIO_printf(bio_err, "%s", *pp);
+ 		goto err;
+ 	}
+ 
+@@ -525,7 +525,7 @@ bad:
+ 
+         if (badops) {
+                 for (pp=usage; (*pp != NULL); pp++)
+-                        BIO_printf(bio_err,*pp);
++                        BIO_printf(bio_err, "%s", *pp);
+                         exit(1);
+         }
+ 
+diff -Naurp openca-tools-1.1.0/src/sv/sv.c openca-tools-1.1.0.oden/src/sv/sv.c
+--- openca-tools-1.1.0/src/sv/sv.c	2007-04-11 03:46:08.000000000 +0200
++++ openca-tools-1.1.0.oden/src/sv/sv.c	2009-10-05 15:41:02.000000000 +0200
+@@ -327,7 +327,7 @@ bad:
+ badops:
+         if (badops) {
+                 for (pp=usage; (*pp != NULL); pp++)
+-                        BIO_printf(bio_err,*pp);
++                        BIO_printf(bio_err, "%s", *pp);
+                         exit(1);
+         }
+ 
+@@ -375,7 +375,7 @@ badops:
+ 	/* engine loading */
+         if (engine != NULL)
+         {
+-            e = load_engine (engine, pre_cmds, post_cmds, bio_err);
++            e = load_engine (engine, pre_cmds, post_cmds, "%s", bio_err);
+             if (e == NULL)
+             {
+                 BIO_printf(bio_err, "[Error]: Failed to load engine\n");
