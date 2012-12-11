@@ -94,3 +94,47 @@ rm -rf %{buildroot}
 %files -n openca-crmf
 %defattr(-,root,root)
 %attr(0755,root,root) %{_bindir}/openca-crmf
+
+
+%changelog
+* Tue Dec 07 2010 Oden Eriksson <oeriksson@mandriva.com> 1.3.0-2mdv2011.0
++ Revision: 613530
+- rebuild
+
+* Mon Apr 19 2010 Funda Wang <fwang@mandriva.org> 1.3.0-1mdv2010.1
++ Revision: 536580
+- New version 1.3.0
+
+* Mon Oct 05 2009 Oden Eriksson <oeriksson@mandriva.com> 1.1.0-3mdv2010.0
++ Revision: 454029
+- P1: fix format string errors
+- rebuild
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
+* Wed Oct 15 2008 Oden Eriksson <oeriksson@mandriva.com> 1.1.0-1mdv2009.1
++ Revision: 293923
+- 1.1.0
+- rediffed P1
+
+* Mon Jul 14 2008 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-2mdv2009.0
++ Revision: 234495
+- rebuild
+- fix build
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sat Aug 18 2007 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1mdv2008.0
++ Revision: 65479
+- fix build
+- Import openca-tools
+
+
+
+* Sat Aug 18 2007 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1mdv2008.0
+- initial Mandriva package
