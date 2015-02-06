@@ -1,7 +1,7 @@
 Summary:	OpenCA Base Tools
 Name:		openca-tools
 Version:	1.3.0
-Release:	%mkrel 2
+Release:	3
 License:	BSD-style
 Group:		System/Servers
 URL:		http://www.openca.org/
