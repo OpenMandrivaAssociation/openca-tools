@@ -4,7 +4,7 @@ Version:	1.3.0
 Release:	3
 License:	BSD-style
 Group:		System/Servers
-URL:		http://www.openca.org/
+URL:		https://www.openca.org/
 Source0:	http://prdownloads.sourceforge.net/openca/%name-%version.tar.gz
 Patch0:		openca-tools-no_rpath.diff
 Patch2:		openca-tools-1.1.0-format_not_a_string_literal_and_no_format_arguments.diff
